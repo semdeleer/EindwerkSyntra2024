@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df7acd07-147d-4850-81ef-77dbd3ab8f7f" name="Changes" comment="fix code: add cart Quantity, delet Quantity, checkout">
-      <change afterPath="$PROJECT_DIR$/Serge/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Serge/static/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Serge/store/templates/store/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="df7acd07-147d-4850-81ef-77dbd3ab8f7f" name="Changes" comment="update add index, make connection from index to shop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Serge/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Serge/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Serge/store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Serge/store/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Serge/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Serge/store/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +69,7 @@
       <workItem from="1715628606270" duration="360000" />
       <workItem from="1715628981387" duration="256000" />
       <workItem from="1715629252404" duration="307000" />
-      <workItem from="1716198969589" duration="991000" />
+      <workItem from="1716198969589" duration="1645000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -118,7 +111,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715629537182</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update add index, make connection from index to shop">
+      <option name="closed" value="true" />
+      <created>1716200260383</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716200260383</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update add index, make connection from index to shop">
+      <option name="closed" value="true" />
+      <created>1716200273198</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716200273198</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +149,7 @@
     <MESSAGE value="django web shop" />
     <MESSAGE value=".idea" />
     <MESSAGE value=".delete" />
-    <option name="LAST_COMMIT_MESSAGE" value=".delete" />
+    <MESSAGE value="update add index, make connection from index to shop" />
+    <option name="LAST_COMMIT_MESSAGE" value="update add index, make connection from index to shop" />
   </component>
 </project>
