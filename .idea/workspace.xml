@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="df7acd07-147d-4850-81ef-77dbd3ab8f7f" name="Changes" comment="update add index, make connection from index to shop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serge/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Serge/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serge/store/templates/store/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/Serge/store/templates/store/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serge/store/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Serge/store/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serge/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Serge/store/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
