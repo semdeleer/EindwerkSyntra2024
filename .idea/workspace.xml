@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df7acd07-147d-4850-81ef-77dbd3ab8f7f" name="Changes" comment=".delete" />
+    <list default="true" id="df7acd07-147d-4850-81ef-77dbd3ab8f7f" name="Changes" comment="fix code: add cart Quantity, delet Quantity, checkout">
+      <change afterPath="$PROJECT_DIR$/Serge/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Serge/static/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Serge/store/templates/store/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serge/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Serge/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serge/store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Serge/store/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serge/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Serge/store/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +51,13 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\serge\EindwerkSyntra2024\Serge\static\js" />
+      <recent name="C:\Users\serge\EindwerkSyntra2024\Serge\static\css" />
+      <recent name="C:\Users\serge\EindwerkSyntra2024\Serge\store\templates\store" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -60,6 +76,7 @@
       <workItem from="1715628606270" duration="360000" />
       <workItem from="1715628981387" duration="256000" />
       <workItem from="1715629252404" duration="307000" />
+      <workItem from="1716198969589" duration="991000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
