@@ -9,6 +9,7 @@ from .utils import cookieCart, cartData, guestOrder
 def index(request):
 	return render(request, 'store/index.html')
 
+
 def store(request):
 	data = cartData(request)
 
@@ -17,7 +18,7 @@ def store(request):
 	items = data['items']
 
 	products = Product.objects.all()
-	context = {'products':products, 'cartItems':cartItems}
+	context = {'products': products, 'cartItems': cartItems}
 	return render(request, 'store/store.html', context)
 
 
@@ -28,18 +29,20 @@ def cart(request):
 	order = data['order']
 	items = data['items']
 
-	context = {'items':items, 'order':order, 'cartItems':cartItems}
+	context = {'items': items, 'order': order, 'cartItems': cartItems}
 	return render(request, 'store/cart.html', context)
+
 
 def checkout(request):
 	data = cartData(request)
-	
+
 	cartItems = data['cartItems']
 	order = data['order']
 	items = data['items']
 
-	context = {'items':items, 'order':order, 'cartItems':cartItems}
+	context = {'items': items, 'order': order, 'cartItems': cartItems}
 	return render(request, 'store/checkout.html', context)
+
 
 def updateItem(request):
 	data = json.loads(request.body)
@@ -66,6 +69,7 @@ def updateItem(request):
 
 	return JsonResponse('Item was added', safe=False)
 
+
 def processOrder(request):
 	transaction_id = datetime.datetime.now().timestamp()
 	data = json.loads(request.body)
@@ -85,12 +89,12 @@ def processOrder(request):
 
 	if order.shipping == True:
 		ShippingAddress.objects.create(
-		customer=customer,
-		order=order,
-		address=data['shipping']['address'],
-		city=data['shipping']['city'],
-		state=data['shipping']['state'],
-		zipcode=data['shipping']['zipcode'],
+			customer=customer,
+			order=order,
+			address=data['shipping']['address'],
+			city=data['shipping']['city'],
+			state=data['shipping']['state'],
+			zipcode=data['shipping']['zipcode'],
 		)
 
 	return JsonResponse('Payment submitted..', safe=False)
