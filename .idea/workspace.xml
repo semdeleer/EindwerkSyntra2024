@@ -5,16 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df7acd07-147d-4850-81ef-77dbd3ab8f7f" name="Changes" comment="update add index, make connection from index to shop">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Serge/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Serge/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Serge/store/templates/store/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/Serge/store/templates/store/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Serge/store/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Serge/store/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Serge/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Serge/store/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zoran/SQL/CreateTableQueries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/Queries/CreateTableQueries.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zoran/SQL/InsertQueries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/Queries/InsertQueries.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zoran/SQL/Selectqueries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/Queries/Selectqueries.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zoran/Zoran.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/Zoran.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -35,19 +40,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Sergey&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Django Server.Django-Sergey.executor": "Run",
+    "Django Server.Sergey-Django.executor": "Run",
+    "Python.manage.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "new-main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.intellij.python.django.customization.DjangoModulesConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\serge\EindwerkSyntra2024\Serge\static\js" />
@@ -55,10 +67,39 @@
       <recent name="C:\Users\serge\EindwerkSyntra2024\Serge\store\templates\store" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Sergey-Django" type="Python.DjangoServer" factoryName="Django server">
+      <module name="EindwerkSyntra2024" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="ecommerce.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="/opt/miniconda3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Serge" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-09665e90c3a7-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.15026.15" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
+        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
       </set>
     </attachedChunks>
   </component>
@@ -74,6 +115,9 @@
       <workItem from="1715628981387" duration="256000" />
       <workItem from="1715629252404" duration="307000" />
       <workItem from="1716198969589" duration="1645000" />
+      <workItem from="1716400699289" duration="329000" />
+      <workItem from="1716401139141" duration="1096000" />
+      <workItem from="1716829143503" duration="3140000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -155,5 +199,8 @@
     <MESSAGE value=".delete" />
     <MESSAGE value="update add index, make connection from index to shop" />
     <option name="LAST_COMMIT_MESSAGE" value="update add index, make connection from index to shop" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Eindwerk$manage.coverage" NAME="manage Coverage Results" MODIFIED="1716830123304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Serge" />
   </component>
 </project>
