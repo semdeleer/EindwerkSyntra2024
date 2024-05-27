@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.8
+FROM python:3.11
 
 # Set environment variables to avoid buffering and set the working directory
 ENV PYTHONUNBUFFERED 1
@@ -15,7 +15,7 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Copy the current directory contents into the container at /opt
-COPY . /opt/
+COPY ../Django /opt/
 
 # Make port 8000 and 5000 available to the world outside this container
 EXPOSE 8000
