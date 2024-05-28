@@ -9,6 +9,8 @@ from .utils import cookieCart, cartData, guestOrder
 def index(request):
 	return render(request, 'store/index.html')
 
+def login(request):
+	return render(request, 'store/login.html')
 
 def store(request):
 	data = cartData(request)
