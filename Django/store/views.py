@@ -69,6 +69,12 @@ def updateItem(request):
 
 	return JsonResponse('Item was added', safe=False)
 
+# Quick solution for token generate
+# I made in checkout.html better way to generate token
+
+# from django.views.decorators.csrf import csrf_exempt
+
+# @csrf_exempt
 
 def processOrder(request):
 	transaction_id = datetime.datetime.now().timestamp()
