@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df7acd07-147d-4850-81ef-77dbd3ab8f7f" name="Changes" comment="update add index, make connection from index to shop">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/EindwerkSyntra2024.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EindwerkSyntra2024.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_05_2024_21_37_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_05_2024_21_37_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_05_2024_21_37__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django/.idea/eindjaar_syntra.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Django/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django/store/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django/store/migrations/0002_product_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django/store/migrations/0002_shippingaddress.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django/store/migrations/0003_product_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django/store/migrations/0004_merge_0002_product_image_0003_product_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django/store/migrations/0005_alter_shippingaddress_address_and_more.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +58,7 @@
     "Django Server.Django-Sergey.executor": "Run",
     "Django Server.Sergey-Django.executor": "Run",
     "Python.manage.executor": "Run",
+    "Python.settings.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -147,7 +140,7 @@
       <workItem from="1717001954648" duration="33000" />
       <workItem from="1717001995143" duration="392000" />
       <workItem from="1717002447962" duration="90000" />
-      <workItem from="1717002581594" duration="319000" />
+      <workItem from="1717002581594" duration="1750000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -245,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716834791461</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update add index, make connection from index to shop">
+      <option name="closed" value="true" />
+      <created>1717003308837</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717003308837</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,11 +268,13 @@
     <MESSAGE value="django web shop" />
     <MESSAGE value=".idea" />
     <MESSAGE value=".delete" />
-    <MESSAGE value="update add index, make connection from index to shop" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="update add index, make connection from index to shop" />
+    <option name="LAST_COMMIT_MESSAGE" value="update add index, make connection from index to shop" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Eindwerk$manage.coverage" NAME="manage Coverage Results" MODIFIED="1716830123304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Serge" />
+    <SUITE FILE_PATH="coverage/EindwerkSyntra2024$settings.coverage" NAME="settings Coverage Results" MODIFIED="1717003151585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Django/ecommerce" />
+    <SUITE FILE_PATH="coverage/EindwerkSyntra2024$manage.coverage" NAME="manage Coverage Results" MODIFIED="1717003007184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Django" />
   </component>
 </project>
