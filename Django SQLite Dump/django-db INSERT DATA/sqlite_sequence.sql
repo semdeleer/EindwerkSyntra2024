@@ -1,0 +1,11 @@
+INSERT INTO sqlite_sequence (name, seq) VALUES ('django_migrations', 21);
+INSERT INTO sqlite_sequence (name, seq) VALUES ('django_admin_log', 60);
+INSERT INTO sqlite_sequence (name, seq) VALUES ('django_content_type', 11);
+INSERT INTO sqlite_sequence (name, seq) VALUES ('auth_permission', 44);
+INSERT INTO sqlite_sequence (name, seq) VALUES ('auth_group', 0);
+INSERT INTO sqlite_sequence (name, seq) VALUES ('auth_user', 1);
+INSERT INTO sqlite_sequence (name, seq) VALUES ('store_product', 6);
+INSERT INTO sqlite_sequence (name, seq) VALUES ('store_customer', 3);
+INSERT INTO sqlite_sequence (name, seq) VALUES ('store_order', 12);
+INSERT INTO sqlite_sequence (name, seq) VALUES ('store_orderitem', 36);
+INSERT INTO sqlite_sequence (name, seq) VALUES ('store_shippingaddress', 7);

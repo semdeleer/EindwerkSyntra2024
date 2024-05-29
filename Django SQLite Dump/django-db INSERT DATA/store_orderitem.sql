@@ -1,0 +1,11 @@
+INSERT INTO store_orderitem (id, quantity, date_added, order_id, product_id) VALUES (26, 1, '2024-05-20 13:06:37.918265', 8, 1);
+INSERT INTO store_orderitem (id, quantity, date_added, order_id, product_id) VALUES (27, 1, '2024-05-20 13:11:50.865764', 9, 1);
+INSERT INTO store_orderitem (id, quantity, date_added, order_id, product_id) VALUES (28, 1, '2024-05-20 13:11:51.619686', 9, 2);
+INSERT INTO store_orderitem (id, quantity, date_added, order_id, product_id) VALUES (29, 1, '2024-05-20 13:12:36.905324', 10, 1);
+INSERT INTO store_orderitem (id, quantity, date_added, order_id, product_id) VALUES (30, 1, '2024-05-20 13:12:36.909432', 10, 2);
+INSERT INTO store_orderitem (id, quantity, date_added, order_id, product_id) VALUES (31, 1, '2024-05-20 13:12:36.913430', 10, 3);
+INSERT INTO store_orderitem (id, quantity, date_added, order_id, product_id) VALUES (32, 1, '2024-05-20 13:13:29.193352', 11, 1);
+INSERT INTO store_orderitem (id, quantity, date_added, order_id, product_id) VALUES (33, 1, '2024-05-20 13:13:29.196308', 11, 2);
+INSERT INTO store_orderitem (id, quantity, date_added, order_id, product_id) VALUES (34, 1, '2024-05-20 13:13:29.200305', 11, 3);
+INSERT INTO store_orderitem (id, quantity, date_added, order_id, product_id) VALUES (35, 1, '2024-05-29 17:17:06.505229', 12, 1);
+INSERT INTO store_orderitem (id, quantity, date_added, order_id, product_id) VALUES (36, 1, '2024-05-29 17:17:06.510231', 12, 2);
