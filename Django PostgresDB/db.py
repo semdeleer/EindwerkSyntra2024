@@ -1,4 +1,7 @@
 import sqlalchemy
+from sqlalchemy import Column, Integer, String, Boolean, Text, DateTime, Float, ForeignKey, SmallInteger, Index, UniqueConstraint, CheckConstraint, create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
 
@@ -169,3 +172,10 @@ class StoreShippingAddress(Base):
     date_added = Column(DateTime, nullable=False)
     customer_id = Column(Integer, ForeignKey('store_customer.id', deferrable=True, initially='DEFERRED'))
     order_id = Column(Integer, ForeignKey('store_order.id', deferrable=True, initially='DEFERRED'))
+
+def connectionDB():
+    engine = create_engine("postgresql://postgres:mes2102@localhost:5432/rejectthesickness")
+    Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
+
+    return Session
