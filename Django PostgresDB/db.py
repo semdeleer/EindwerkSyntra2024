@@ -179,3 +179,9 @@ def connectionDB():
     Session = sessionmaker(bind=engine)
 
     return Session
+
+engine = create_engine("postgresql://postgres:mes2102@localhost:5432/Django-syntra")
+Base.metadata.create_all(engine)
+
+Session = sessionmaker(bind=engine)
+
