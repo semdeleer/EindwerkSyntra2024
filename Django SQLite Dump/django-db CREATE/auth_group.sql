@@ -5,4 +5,3 @@ create table auth_group
     name varchar(150) not null
         unique
 );
-
