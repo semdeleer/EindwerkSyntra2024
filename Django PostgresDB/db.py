@@ -185,3 +185,10 @@ Base.metadata.create_all(engine)
 
 Session = sessionmaker(bind=engine)
 
+def write_to_db(table_class, **kwargs):
+    session = Session()
+    record = table_class(**kwargs)
+    session.add(record)
+    session.commit()
+    session.close()
+    print(f"{table_class.__tablename__} record added.")
