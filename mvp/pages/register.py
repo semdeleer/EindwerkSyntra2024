@@ -7,6 +7,8 @@ import re
 class Register(ft.View):
     def __init__(self, page: ft.Page):
         super(Register, self).__init__(route="/register")
+        self.page = page
+        self.error_label_user = None
         self.password_row = None
         self.email_row = None
         self.username_row = None
@@ -17,20 +19,20 @@ class Register(ft.View):
         self.error_label_email = None
         self.valid_icon_pw = None
         self.valid_icon_email = None
-        self.page = page
         self.action()
 
     def action(self):
         self.valid_icon_email = ft.Icon(color=ft.colors.GREEN_300, name=ft.icons.CHECK_CIRCLE_OUTLINED, visible=False)
         self.valid_icon_pw = ft.Icon(color=ft.colors.GREEN_300, name=ft.icons.CHECK_CIRCLE_OUTLINED, visible=False)
+        self.error_label_user = ft.Text(value="", color=ft.colors.RED_300)
         self.error_label_email = ft.Text(value="", color=ft.colors.RED_300)
         self.error_label_pw = ft.Text(value="", color=ft.colors.RED_300)
-        self.username = ft.TextField(label="Username", autofocus=True)
-        self.email = ft.TextField(label="Email", on_change=self.email_checker)
+        self.username = ft.TextField(label="Username", autofocus=True, on_blur=self.username_checker)
+        self.email = ft.TextField(label="Email", on_blur=self.email_checker)
         self.password = ft.TextField(label="Password", password=True, can_reveal_password=True,
                                      on_change=self.password_checker)
 
-        self.username_row = ft.Row([self.username])
+        self.username_row = ft.Row([self.username,  self.error_text_user])
         self.email_row = ft.Row([self.email, self.valid_icon_email, self.error_label_email])
         self.password_row = ft.Row([self.password, self.valid_icon_pw, self.error_label_pw])
 
@@ -42,12 +44,30 @@ class Register(ft.View):
             ft.ElevatedButton(
                 content=ft.Text("Register"),
                 on_click=self.register,
+
             ),
             ft.ElevatedButton(
                 content=ft.Text("Back to Home"),
                 on_click=lambda e: self.page.go("/"),
             ),
         ]
+
+    def error_text_user(self, message):
+        if message == "exists":
+            self.error_label_user.value = "Username already exists"
+            return
+        else:
+            self.error_label_user.value = ""
+            return
+
+    def error_text_email(self, message):
+        if message == "Valid Email!":
+            self.valid_icon_email.visible = True
+            self.error_label_email.value = ""
+        else:
+            self.valid_icon_email.visible = False
+            self.error_label_email.value = message
+        self.update()
 
     def error_text_pw(self, message):
         if message == "Valid Password!":
@@ -58,14 +78,13 @@ class Register(ft.View):
             self.error_label_pw.value = message
         self.update()
 
-    def error_text_email(self, message):
-        if message == "Valid Email!":
-            self.valid_icon_email.visible = True
-            self.error_label_email.value = ""
+    def username_checker(self, e):
+        if Model.check_username(e.value):
+            self.error_text_user("exists")
+            return
         else:
-            self.valid_icon_email.visible = False
-            self.error_label_email.value = message
-        self.update()
+            self.error_text_user("valid")
+            return
 
     def password_checker(self, e):
 
