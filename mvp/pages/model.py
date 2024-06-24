@@ -35,9 +35,9 @@ class Model(object):
     def check_username(username: str):
         existing_username = session.query(Users).filter(Users.name == username).one_or_none()
         if existing_username:
-            return False
-        else:
             return True
+        else:
+            return False
 
     @staticmethod
     def set_session(username: str) -> Sessions:
