@@ -148,7 +148,7 @@ class Register(ft.View):
             self.error_text_email("Please enter a valid email address")
         return
 
-    def register(self):
+    def register(self, e):
         if Model.add_user(self.username.value, self.password.value, self.email.value):
             self.page.snack_bar = ft.SnackBar(ft.Text("Registration successful. Please sign in."))
             self.page.snack_bar.open = True
