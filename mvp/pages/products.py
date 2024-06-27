@@ -1,13 +1,14 @@
 import flet as ft
 from pages.model import Model
+import os
 
 class Product(ft.View):
     def __init__(self, page: ft.Page):
         super(Product, self).__init__(route="/products")
         self.page = page
-        self.initilize()
+        self.initialize()
 
-    def initilize(self):
+    def initialize(self):
         self.products = ft.Row(expand=True, scroll="auto", spacing=30)
         self.create_products()
 
@@ -32,7 +33,7 @@ class Product(ft.View):
                         icon_size=18,
                     ),
                     ft.IconButton(
-                        icon="settings",  
+                        icon="logout",  
                         on_click=lambda e: self.page.go("/"),
                         icon_size=18,
                     ),
@@ -43,23 +44,20 @@ class Product(ft.View):
 
     def create_products(self, products: dict = Model.get_products()):
         for _, values in products.items():
-            for key, value in values.items():
-                if key == "name":
-                    name = values["name"]
-                elif key == "description":
-                    description = values["description"]
-                elif key == "id":
-                    idd = values["id"]
-                elif key == "price":
-                    price = self.create_product_event(values["price"], idd)
+            name = values.get("name", "")
+            description = values.get("description", "")
+            idd = values.get("id", 0)
+            price = self.create_product_event(values.get("price", ""), idd)
 
             texts = self.create_product_text(name, description)
+            image_path = self.get_image_path(name)
 
-            self.create_full_item_view(texts, price)
+            self.create_full_item_view(image_path, texts, price)
 
-    def create_full_item_view(self, texts, price):
+    def create_full_item_view(self, image_path, texts, price):
         item = ft.Column()
 
+        item.controls.append(self.create_product_image(image_path))
         item.controls.append(self.create_product_container(4, texts))
         item.controls.append(self.create_product_container(1, price))
 
@@ -88,6 +86,13 @@ class Product(ft.View):
 
     def create_product_container(self, expand: int, control: ft.Control):
         return ft.Container(content=control, expand=expand, padding=5)
+
+    def create_product_image(self, image_path: str):
+        return ft.Image(src=image_path, width=200, height=200, fit="contain")
+
+    def get_image_path(self, product_name: str):
+        # Assuming image folder is in the same directory as this script
+        return f"mvp/images/{product_name}.webp"
 
     def add_to_cart(self, product_id: int):
         user_session = self.page.session.get("user_session")
