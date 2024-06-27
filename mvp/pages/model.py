@@ -3,6 +3,8 @@ from sqlalchemy.orm.exc import NoResultFound, MultipleResultsFound
 from sqlalchemy.exc import IntegrityError
 from database.dbs import write_to_db
 import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 
 class Model(object):
@@ -90,25 +92,38 @@ class Model(object):
     def checkout(session_id: int):
         cart = Model.get_cart(session_id)
         total_amount = sum(item["quantity"] * item["price"] for item in cart.values())
-
+        items = "\n".join(f"{item['name']} price:{item['price']} quantity:{item['quantity']}" for item in cart.values())
+        
         # Fetch user's email from the Users table
         user = session.query(Users).join(Sessions).filter(Sessions.id == session_id).one()
         user_email = user.email
 
         # Setting up email
         try:
-            s = smtplib.SMTP("smtp.gmail.com", 578)
+            s = smtplib.SMTP("smtp.gmail.com", 587)
             s.starttls()
-            s.login("rsteindwerk@gmail.com", "rsteindwerk1#")
-            message = f"Subject: Order Confirmation\n\nThank you for your order, we will deliver it soon. Here is your receipt:\n\n{cart}\n\nTotal amount: ${total_amount}"
-            s.sendmail("rsteindwerk@gmail.com", user_email, message)
+            s.login("rsteindwerk@gmail.com", "prab wdwt asbv zbbc")
+            
+            subject = "Order Confirmation"
+            body = f"Thank you for your order, we will deliver it soon. Here is your receipt:\n\n{items}\n\nTotal amount: ${total_amount}"
+            
+            message = MIMEMultipart()
+            message["From"] = "rsteindwerk@gmail.com"
+            message["To"] = user_email
+            message["Subject"] = subject
+            message.attach(MIMEText(body, "plain"))
+            
+            s.sendmail("rsteindwerk@gmail.com", user_email, message.as_string())
             s.quit()
         except Exception as e:
             print(f"Failed to send email: {e}")
             return None
 
         print(f"Sending total amount ${total_amount} to {user_email}")
+        
+        # Assuming session and session.commit() are set up correctly elsewhere
         new_session = Sessions(user_id=user.id)
         session.add(new_session)
         session.commit()
+        
         return new_session

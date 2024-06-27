@@ -1,15 +1,26 @@
 import flet as ft
 from pages.model import Model
 
+
 class Cart(ft.View):
     def __init__(self, page: ft.Page):
         super(Cart, self).__init__(route="/cart")
         self.page = page
-        self.initilize()
+        self.initialize()
 
-    def initilize(self):
+    def initialize(self):
         self.cart_items = ft.Column(spacing=20)
         self.create_cart()
+
+        self.confirm_dialog = ft.AlertDialog(
+            title=ft.Text("Confirm Checkout"),
+            content=ft.Text("Are you sure you want to checkout?"),
+            actions=[
+                ft.TextButton("Cancel", on_click=self.close_dialog),
+                ft.TextButton("Confirm", on_click=self.confirm_checkout),
+            ],
+            actions_alignment="end",
+        )
 
         self.controls = [
             ft.Row(
@@ -25,7 +36,7 @@ class Cart(ft.View):
             ft.Text("Cart", size=32),
             ft.Text("Your cart items"),
             self.cart_items,
-            ft.ElevatedButton(text="Checkout", on_click=self.checkout),
+            ft.ElevatedButton(text="Checkout", on_click=self.show_confirm_dialog),
         ]
 
     def create_cart(self):
@@ -70,14 +81,24 @@ class Cart(ft.View):
     def create_item_price(self, price: int):
         return ft.Text(f"${price}")
 
-    def checkout(self, e):
+    def show_confirm_dialog(self, e):
+        self.page.dialog = self.confirm_dialog
+        self.confirm_dialog.open = True
+        self.page.update()
+
+    def close_dialog(self, e):
+        self.confirm_dialog.open = False
+        self.page.update()
+
+    def confirm_checkout(self, e):
+        self.close_dialog(e) 
         user_session = self.page.session.get("user_session")
         if user_session:
             result = Model.checkout(user_session)
             if result:
                 self.page.snack_bar = ft.SnackBar(ft.Text("Checkout successful"))
                 self.page.snack_bar.open = True
-                self.page.go("/products")
+                self.page.go("/")
             else:
                 self.page.snack_bar = ft.SnackBar(ft.Text("Checkout failed, please try again."))
                 self.page.snack_bar.open = True
