@@ -1,9 +1,9 @@
-
 from database.dbs import session, Products, Users, Carts, Sessions
 from sqlalchemy.orm.exc import NoResultFound, MultipleResultsFound
 from sqlalchemy.exc import IntegrityError
 from database.dbs import write_to_db
 import smtplib
+
 
 class Model(object):
 
@@ -29,7 +29,15 @@ class Model(object):
         except NoResultFound:
             return None
         except MultipleResultsFound:
-            return None  
+            return None
+
+    @staticmethod
+    def check_username(username: str):
+        existing_username = session.query(Users).filter(Users.name == username).one_or_none()
+        if existing_username:
+            return True
+        else:
+            return False
 
     @staticmethod
     def set_session(username: str) -> Sessions:
@@ -63,7 +71,8 @@ class Model(object):
 
     @staticmethod
     def add_to_cart(session_id: int, product_id: int) -> Carts:
-        cart_item = session.query(Carts).filter(Carts.session_id == session_id, Carts.product_id == product_id).one_or_none()
+        cart_item = session.query(Carts).filter(Carts.session_id == session_id,
+                                                Carts.product_id == product_id).one_or_none()
         if cart_item:
             cart_item.quantity += 1
         else:
